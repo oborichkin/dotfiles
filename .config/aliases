@@ -1,0 +1,8 @@
+alias dc="docker-compose"
+alias dc-build="docker-compose build --no-cache"
+alias p="sudo pacman"
+alias ll="ls -lah"
+alias vim="nvim"
+alias start-vpn="sudo systemctl start openvpn-client@protei"
+alias stop-vpn="sudo systemctl stop openvpn-client@protei"
+alias dotfiles="git --git-dir=$XDG_DATA_HOME/src/dotfiles --work-tree=$HOME"
