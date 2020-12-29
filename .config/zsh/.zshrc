@@ -8,6 +8,7 @@ stty stop undef		# Disable ctrl-s to freeze terminal.
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
+bindkey '^R' history-incremental-search-backward
 
 # Basic auto/tab complete:
 autoload -U compinit
