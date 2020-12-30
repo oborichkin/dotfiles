@@ -1,4 +1,5 @@
 alias tmuxconf="vim ~/.config/tmux/tmux.conf"
+alias i3conf="vim ~/.config/i3/config"
 
 alias dc="docker-compose"
 alias dc-build="docker-compose build --no-cache"
