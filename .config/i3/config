@@ -142,11 +142,11 @@ bindsym $mod+r mode "resize"
 
 new_window none
 new_float none
-gaps inner 5
 
 # Autostart
 exec --no-startup-id nitrogen --restore
 exec_always --no-startup-id launch-polybar
+exec_always --no-startup-id launch-mpd
 exec_always --no-startup-id albert
 exec_always --no-startup-id picom --daemon
 
