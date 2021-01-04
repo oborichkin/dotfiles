@@ -1,0 +1,5 @@
+#!/bin/bash
+
+~/.config/polybar/launch.sh --forest
+
+echo "Polybar launched..."

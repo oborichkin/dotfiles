@@ -18,9 +18,9 @@ bindsym $mod+Return exec --no-startup-id alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# App launchers (I am currently testing albert, so everything is disabled)
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # bindsym $mod+p exec rofi -show run
+bindsym mod1+space exec --no-startup-id ~/.config/polybar/forest/scripts/launcher.sh
 
 # change focus
 bindsym $mod+j focus left
@@ -147,7 +147,6 @@ new_float none
 exec --no-startup-id nitrogen --restore
 exec_always --no-startup-id launch-polybar
 exec_always --no-startup-id launch-mpd
-exec_always --no-startup-id albert
 exec_always --no-startup-id picom --daemon
 
 # TODO Write scripts for screenshots and use env vars
