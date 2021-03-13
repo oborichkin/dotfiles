@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:monospace 8
+font pango:Cascadia Code,monospace 8
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -25,6 +25,7 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # bindsym $mod+p exec rofi -show run
 bindsym mod1+space exec --no-startup-id ~/.config/polybar/forest/scripts/launcher.sh
+bindsym $mod+p exec --no-startup-id ~/.config/polybar/forest/scripts/powermenu.sh
 
 # change focus
 bindsym $mod+j focus left
@@ -149,7 +150,7 @@ new_float none
 
 # Autostart
 exec --no-startup-id nitrogen --restore
-exec_always --no-startup-id launch-polybar
+# exec_always --no-startup-id launch-polybar
 exec_always --no-startup-id launch-mpd
 exec_always --no-startup-id picom --daemon
 
@@ -159,3 +160,9 @@ bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~
 
 # OSX-like area selection screenshots
 bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/pix/screenshots && mv $f ~/pix/screenshots && xclip -selection clipboard -t image/png -i ~/pix/screenshots/`ls -1 -t ~/pix/screenshots | head -1`' # Area selection
+
+bar {
+    status_command i3status
+    font pango:Cascadia Code, monospace 10
+    position top
+}

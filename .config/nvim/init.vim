@@ -6,7 +6,8 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin()
-
+  Plug 'vim-airline/vim-airline'
+  Plug 'ojroques/vim-scrollstatus'
 call plug#end()
 
 map <C-j> <C-W>j
