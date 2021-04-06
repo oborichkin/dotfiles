@@ -4,6 +4,14 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 
+bindkey "\e[1;5D" backward-word
+bindkey "\e[1;5C" forward-word
+bindkey "\e[3;5~" kill-word
+bindkey "^H"    backward-kill-word
+bindkey "\e[3~"   delete-char
+bindkey "\e[H"    beginning-of-line
+bindkey "\e[F"    end-of-line
+
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
