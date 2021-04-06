@@ -13,6 +13,7 @@ bindkey "\e[H"    beginning-of-line
 bindkey "\e[F"    end-of-line
 
 # History in cache directory:
+setopt hist_ignore_all_dups
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
