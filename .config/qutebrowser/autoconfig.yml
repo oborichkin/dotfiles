@@ -14,7 +14,9 @@ settings:
   content.geolocation:
     https://armyhelp.ru: false
     https://www.dns-shop.ru: false
-  content.notifications:
+  content.media.audio_video_capture:
+    https://webrtc.nirbheek.in: true
+  content.notifications.enabled:
     https://neuronus.com: false
     https://svs.guru: false
     https://www.analyticsvidhya.com: false

@@ -1,17 +1,24 @@
 general {
 	output_format = "i3bar"
-	colors = true
+	colors = false
 	separator = ""
 	interval = 5
 }
 
 order += "cpu_temperature 0"
+order += "read_file BRIGHTNESS"
 order += "volume master"
 order += "battery 0"
 order += "tztime local"
 
 tztime local {
         format = "  🕓 %H:%M %d.%m.%Y  "
+}
+
+read_file BRIGHTNESS {
+	format = "  ☀️ %content%"
+	path = "/home/pavel/.cache/brightness"
+	max_characters = 2
 }
 
 battery 0 {
@@ -29,11 +36,11 @@ battery 0 {
 
 volume master {
         format = "  🔊 %volume"
-        format_muted = "🔇"
+        format_muted = "  🔇"
         device = "pulse:1"
 }
 
 cpu_temperature 0 {
-        format = "CPU🌡️ %degrees °C"
+        format = "  CPU🌡️ %degrees °C"
         path = "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input"
 }
