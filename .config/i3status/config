@@ -8,8 +8,13 @@ general {
 order += "cpu_temperature 0"
 order += "read_file BRIGHTNESS"
 order += "volume master"
+order += "disk /"
 order += "battery 0"
 order += "tztime local"
+
+disk "/" {
+        format = "  🖴 %free"
+}
 
 tztime local {
         format = "  🕓 %H:%M %d.%m.%Y  "
