@@ -110,6 +110,8 @@ new_float none
 
 # Autostart
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id pasystray
+exec --no-startup-id nm-applet
 # exec_always --no-startup-id launch-polybar
 exec_always --no-startup-id launch-mpd
 exec_always --no-startup-id picom --daemon

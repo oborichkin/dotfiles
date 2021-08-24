@@ -7,7 +7,6 @@ general {
 
 order += "cpu_temperature 0"
 order += "read_file BRIGHTNESS"
-order += "volume master"
 order += "disk /"
 order += "battery 0"
 order += "tztime local"
@@ -42,7 +41,7 @@ battery 0 {
 volume master {
         format = "  🔊 %volume"
         format_muted = "  🔇"
-        device = "pulse:1"
+        device = "pulse:0"
 }
 
 cpu_temperature 0 {
