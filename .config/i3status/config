@@ -5,10 +5,7 @@ general {
 	interval = 5
 }
 
-order += "cpu_temperature 0"
-order += "read_file BRIGHTNESS"
 order += "disk /"
-order += "battery 0"
 order += "tztime local"
 
 disk "/" {
@@ -19,32 +16,3 @@ tztime local {
         format = "  🕓 %H:%M %d.%m.%Y  "
 }
 
-read_file BRIGHTNESS {
-	format = "  ☀️ %content%"
-	path = "/home/pavel/.cache/brightness"
-	max_characters = 2
-}
-
-battery 0 {
-        format = "  %status %percentage %remaining"
-        format_down = "No battery"
-        status_chr = "⚡ CHR"
-        status_bat = "🔋 BAT"
-        status_unk = "? UNK"
-        status_full = "⚡FULL"
-        path = "/sys/class/power_supply/BAT%d/uevent"
-        low_threshold = 10
-	last_full_capacity = true
-	integer_battery_capacity = true
-}
-
-volume master {
-        format = "  🔊 %volume"
-        format_muted = "  🔇"
-        device = "pulse:0"
-}
-
-cpu_temperature 0 {
-        format = "  CPU🌡️ %degrees °C"
-        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input"
-}

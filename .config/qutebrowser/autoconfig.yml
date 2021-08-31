@@ -18,6 +18,7 @@ settings:
     https://webrtc.nirbheek.in: true
   content.notifications.enabled:
     https://neuronus.com: false
+    https://spb.hh.ru: false
     https://svs.guru: false
     https://www.analyticsvidhya.com: false
     https://www.ikea.com: false

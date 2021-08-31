@@ -28,10 +28,8 @@ bindsym $mod+Return exec --no-startup-id alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-# bindsym $mod+p exec rofi -show run
-bindsym mod1+space exec --no-startup-id ~/.config/polybar/forest/scripts/launcher.sh
-bindsym $mod+p exec --no-startup-id ~/.config/polybar/forest/scripts/powermenu.sh
+bindsym mod1+space exec --no-startup-id launcher
+bindsym $mod+p exec --no-startup-id powermenu
 
 # change focus
 bindsym $mod+h focus left
@@ -112,26 +110,22 @@ new_float none
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id pasystray
 exec --no-startup-id nm-applet
-# exec_always --no-startup-id launch-polybar
 exec_always --no-startup-id launch-mpd
 exec_always --no-startup-id picom --daemon
 
-# TODO Write scripts for screenshots and use env vars
-# Multi-screen screenshots with scrot
-bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/pix/screenshots && mv $f ~/pix/screenshots && xclip -selection clipboard -t image/png -i ~/pix/screenshots/`ls -1 -t ~/pix/screenshots | head -1`' # All screens
-
-# OSX-like area selection screenshots
-bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/pix/screenshots && mv $f ~/pix/screenshots && xclip -selection clipboard -t image/png -i ~/pix/screenshots/`ls -1 -t ~/pix/screenshots | head -1`' # Area selection
+# Screenshots
+bindsym --release Print exec screenshot
+bindsym --release Shift+Print exec screenshot region
 
 # Gaps
 smart_gaps on
 smart_gaps inverse_outer
-gaps outer 15
+gaps outer 25
 
 default_border pixel 3
 
 bar {
     status_command i3status
-    font pango:Cascadia Code, monospace 10
+    font pango:Cascadia Code, monospace 14
     position top
 }
