@@ -5,7 +5,6 @@ general {
 	interval = 5
 }
 
-order += "volume master"
 order += "disk /"
 order += "tztime local"
 
