@@ -1,15 +1,36 @@
 general {
 	output_format = "i3bar"
-	colors = false
+	colors = true
 	separator = ""
 	interval = 5
 }
 
-order += "disk /"
+order += "ethernet enp8s0"
+order += "path_exists 🔒"
+# order += "disk /"
+# order += "disk /home"
+# order += "disk /var"
 order += "tztime local"
 
+ethernet enp8s0 {
+	format_up = "🌐: %ip (%speed) "
+	format_down = "🌐: down "
+}
+
+path_exists 🔒 {
+	path = "/proc/sys/net/ipv4/conf/tun0"
+}
+
 disk "/" {
-        format = "  🖴 %free"
+        format = " / %free"
+}
+
+disk "/home" {
+	format = " /home %free"
+}
+
+disk "/var" {
+	format = " /var %free"
 }
 
 tztime local {
