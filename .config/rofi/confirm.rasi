@@ -1,6 +1,6 @@
 /* Confirm Dialog */
 
-@import "~/.cache/wal/colors-rofi-light"
+@import "base.rasi"
 
 * {
     background-color:       @bg;

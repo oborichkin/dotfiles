@@ -12,18 +12,6 @@ inputbar {
     children: [ textbox-prompt-colon, prompt ];
 }
 
-listview {
-    margin: 25px 0 0 0;
-    lines: 5;
-}
-
 element {
     border: 0.5em;
-}
-
-element selected,
-element-text selected {
-    background-color: @active-background;
-    border-color: @active-background;
-    border-radius: 15px;
 }
