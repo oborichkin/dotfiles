@@ -26,3 +26,6 @@ export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
 export PATH="$JAVA_HOME/bin:$PATH"
+
+export GOPATH="$XDG_DATA_HOME"/go
+export PATH="$PATH:$GOPATH/bin"
