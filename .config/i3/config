@@ -112,16 +112,15 @@ new_float none
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id pasystray
 exec --no-startup-id nm-applet
-# exec_always --no-startup-id launch-polybar
-exec_always --no-startup-id launch-mpd
+# exec_always --no-startup-id launch-mpd
+exec_always --no-startup-id /usr/bin/polkit-dump-agent
 exec_always --no-startup-id picom --daemon
+# Keyboard layout
+exec --no-startup-id setxkbmap -layout us,ru
+exec --no-startup-id setxkbmap -option 'grp:win_space_toggle'
 
-# TODO Write scripts for screenshots and use env vars
-# Multi-screen screenshots with scrot
-bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/pix/screenshots && mv $f ~/pix/screenshots && xclip -selection clipboard -t image/png -i ~/pix/screenshots/`ls -1 -t ~/pix/screenshots | head -1`' # All screens
-
-# OSX-like area selection screenshots
-bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/pix/screenshots && mv $f ~/pix/screenshots && xclip -selection clipboard -t image/png -i ~/pix/screenshots/`ls -1 -t ~/pix/screenshots | head -1`' # Area selection
+bindsym --release Print exec --no-startup-id maim -u | xclip -selection clipboard -t image/png -i
+bindsym --release Shift+Print exec --no-startup-id maim -s -u | xclip -selection clipboard -t image/png -i
 
 # Gaps
 smart_gaps on

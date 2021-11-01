@@ -8,11 +8,16 @@ general {
 order += "cpu_temperature 0"
 order += "read_file BRIGHTNESS"
 order += "disk /"
+order += "disk /var"
 order += "battery 0"
 order += "tztime local"
 
 disk "/" {
-        format = "  🖴 %free"
+        format = " / %free"
+}
+
+disk "/var" {
+	format = " /var %free"
 }
 
 tztime local {
