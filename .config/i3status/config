@@ -1,12 +1,14 @@
 general {
 	output_format = "i3bar"
-	colors = false
+	colors = true
 	separator = ""
 	interval = 5
 }
 
+order += "ethernet wlp3s0"
+order += "path_exists 🔒"
 order += "cpu_temperature 0"
-order += "read_file BRIGHTNESS"
+# order += "read_file BRIGHTNESS"
 order += "disk /"
 order += "disk /var"
 order += "battery 0"
@@ -14,6 +16,27 @@ order += "tztime local"
 
 disk "/" {
         format = " / %free"
+}
+
+disk "/var" {
+	format = " /var %free"
+}
+
+ethernet enp8s0 {
+	format_up = "🌐: %ip (%speed) "
+	format_down = "🌐: down "
+}
+
+path_exists 🔒 {
+	path = "/proc/sys/net/ipv4/conf/tun0"
+}
+
+disk "/" {
+        format = " / %free"
+}
+
+disk "/home" {
+	format = " /home %free"
 }
 
 disk "/var" {
@@ -41,12 +64,6 @@ battery 0 {
         low_threshold = 10
 	last_full_capacity = true
 	integer_battery_capacity = true
-}
-
-volume master {
-        format = "  🔊 %volume"
-        format_muted = "  🔇"
-        device = "pulse:0"
 }
 
 cpu_temperature 0 {
