@@ -17,6 +17,7 @@ settings:
   content.media.audio_video_capture:
     https://webrtc.nirbheek.in: true
   content.notifications.enabled:
+    https://frameboxxindore.com: false
     https://neuronus.com: false
     https://spb.hh.ru: false
     https://svs.guru: false

@@ -27,3 +27,5 @@ compinit
 _comp_options+=(globdots)		# Include hidden files.
 
 source $XDG_CONFIG_HOME/aliases
+
+cat ~/.cache/wal/sequences

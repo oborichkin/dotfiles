@@ -5,20 +5,27 @@ general {
 	interval = 5
 }
 
-order += "ethernet enp8s0"
+order += "ethernet enp0s25"
 order += "path_exists 🔒"
+order += "battery 0"
 # order += "disk /"
 # order += "disk /home"
 # order += "disk /var"
 order += "tztime local"
 
-ethernet enp8s0 {
+ethernet enp0s25 {
 	format_up = "🌐: %ip (%speed) "
 	format_down = "🌐: down "
 }
 
 path_exists 🔒 {
 	path = "/proc/sys/net/ipv4/conf/tun0"
+}
+
+battery 0 {
+        format = "  %status %percentage %remaining "
+	last_full_capacity = true
+	integer_battery_capacity = true
 }
 
 disk "/" {
