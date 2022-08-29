@@ -110,11 +110,7 @@ new_float none
 
 # Autostart
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id pasystray
 exec --no-startup-id nm-applet
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec_always --no-startup-id launch-mpd
-exec_always --no-startup-id picom --daemon
 
 # Screenshots
 bindsym --release Print exec screenshot
