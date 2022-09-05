@@ -16,12 +16,13 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 export VSCODE_PORTABLE="$XDG_DATA_HOME"/vscode
 export ROBOTFRAMEWORK_LS_USER_HOME="$XDG_DATA_HOME"/robotframework-ls
-export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export LESSHISTFILE="-"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/inputrc"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
+export KDEHOME="$XDG_CONFIG_HOME"/kde
 
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
 export PATH="$JAVA_HOME/bin:$PATH"

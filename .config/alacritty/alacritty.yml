@@ -18,7 +18,7 @@ font:
     family: CaskaydiaCovePL Nerd Font
     style: Bold Italic
 
-  size: 7
+  size: 12
 
 window:
   padding:
