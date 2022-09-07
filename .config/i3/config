@@ -1,8 +1,6 @@
 set $mod Mod4
 
-client.focused #B05529 #B05529 #B05529 #B05529 #B05529 #B05529
-
-font pango:Cascadia Code,monospace 7
+font pango:Cascadia Code,monospace 16
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -111,6 +109,7 @@ new_float none
 # Autostart
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
+exec --no-startup-id dunst
 
 # Screenshots
 bindsym --release Print exec screenshot
@@ -120,17 +119,6 @@ default_border pixel 1
 
 bar {
 	status_command i3status
-	font pango:Cascadia Code, monospace 12
+	font pango:Cascadia Code, monospace 16
 	position top
-	colors {
-    background #000000
-    statusline #FFFFFF
-    separator  #666666
-
-    focused_workspace  #9C5332 #9C5332 #090401
-    active_workspace   #090401 #090401 #E2CEC2
-    inactive_workspace #090401 #090401 #966F72
-    urgent_workspace   #090401 #72504E #E2CEC2
-    binding_mode       #090401 #72504E #E2CEC2
-  }
 }

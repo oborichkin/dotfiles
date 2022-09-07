@@ -1,4 +1,0 @@
-xset s off
-xset -dpms s off
-xset s noblank
-xset r rate 210 40

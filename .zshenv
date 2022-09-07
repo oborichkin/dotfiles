@@ -27,6 +27,7 @@ export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 export GEM_HOME="$XDG_DATA_HOME"/gem
 export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
 export VAGRANT_HOME="$XDG_DATA_HOME"/vagrant
 export VAGRANT_ALIAS_FILE="$XDG_DATA_HOME"/vagrant/aliases
