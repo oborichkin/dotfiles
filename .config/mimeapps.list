@@ -1,0 +1,6 @@
+[Default Applications]
+x-scheme-handler/tg=userapp-Telegram Desktop-13Z9R1.desktop
+x-scheme-handler/notion=notion-app.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Telegram Desktop-13Z9R1.desktop;
