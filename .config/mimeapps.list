@@ -1,6 +1,24 @@
-[Default Applications]
-x-scheme-handler/tg=userapp-Telegram Desktop-13Z9R1.desktop
-x-scheme-handler/notion=notion-app.desktop
-
 [Added Associations]
-x-scheme-handler/tg=userapp-Telegram Desktop-13Z9R1.desktop;
+audio/mpeg=audacity.desktop;
+image/png=sxiv.desktop;
+inode/directory=org.kde.dolphin.desktop;
+x-scheme-handler/geo=qwant-maps-geo-handler.desktop;
+x-scheme-handler/http=firefox.desktop;org.qutebrowser.qutebrowser.desktop;
+x-scheme-handler/https=firefox.desktop;org.qutebrowser.qutebrowser.desktop;
+x-scheme-handler/mailto=thunderbird.desktop;org.kde.kmail2.desktop;
+x-scheme-handler/tel=Zoom.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-6PGZ80.desktop;
+image/jpeg=feh.desktop;
+
+[Default Applications]
+inode/directory=org.kde.dolphin.desktop;
+x-scheme-handler/bitwarden=bitwarden.desktop
+x-scheme-handler/geo=qwant-maps-geo-handler.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/mailto=thunderbird.desktop;
+x-scheme-handler/notion=notion-app.desktop
+x-scheme-handler/obsidian=obsidian.desktop
+x-scheme-handler/tel=Zoom.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-6PGZ80.desktop
+x-scheme-handler/unityhub=unityhub.desktop
