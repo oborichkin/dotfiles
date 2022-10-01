@@ -29,13 +29,8 @@ bindsym $mod+Shift+q kill
 bindsym mod1+space exec --no-startup-id launcher
 bindsym $mod+p exec --no-startup-id powermenu
 bindsym $mod+b exec --no-startup-id paman
-# change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+l exec --no-startup-id i3lock
 
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -96,6 +91,9 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+bindsym $mod+Shift+m exec rofi -modi emoji -show emoji -kb-custom-1 Ctrl+C
+bindsym $mod+Shift+p exec workon
 
 bindsym $mod+e layout toggle split
 bindsym $mod+t layout tabbed
