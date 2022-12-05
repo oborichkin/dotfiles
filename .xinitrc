@@ -1,7 +1,7 @@
 USERXSESSION="$XDG_CACHE_HOME/X11/xsession"
-USERXSESSIONRC="$XDG_CAHCE_HOME/.cache/X11/xsessionrc"
-ALTUSERXSESSION="$XDG_CACHE_HOME/.cache/X11/Xsession"
-ERRFILE="$XDG_CACHE_HOME/.cache/X11/xsession-errors"
+USERXSESSIONRC="$XDG_CAHCE_HOME/X11/xsessionrc"
+ALTUSERXSESSION="$XDG_CACHE_HOME/X11/Xsession"
+ERRFILE="$XDG_CACHE_HOME/X11/xsession-errors"
 
 setxkbmap -layout us,ru
 setxkbmap -option 'grp:win_space_toggle'

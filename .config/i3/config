@@ -21,7 +21,7 @@ bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight -inc 5 && xbacklig
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5 && xbacklight > ~/.cache/brightness && $refresh_i3status
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty 
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -30,11 +30,6 @@ bindsym mod1+space exec --no-startup-id launcher
 bindsym $mod+p exec --no-startup-id powermenu
 bindsym $mod+b exec --no-startup-id paman
 bindsym $mod+l exec --no-startup-id i3lock
-
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -73,6 +68,10 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
+bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Tab workspace back_and_forth
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -92,7 +91,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+Shift+m exec rofi -modi emoji -show emoji -kb-custom-1 Ctrl+C
+bindsym $mod+Shift+m exec rofi -modi emoji -show emoji
 bindsym $mod+Shift+p exec workon
 
 bindsym $mod+e layout toggle split
@@ -108,15 +107,18 @@ new_float none
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
+exec --no-startup-id polybar
+exec --no-startup-id picom
 
 # Screenshots
 bindsym --release Print exec screenshot
 bindsym --release Shift+Print exec screenshot region
 
-default_border pixel 1
+default_border pixel 0
+default_floating_border pixel 0
+for_window [class=".*"] border pixel 0
+for_window [class="Alacritty"] floating enable
 
-bar {
-	status_command i3status
-	font pango:Cascadia Code, monospace 16
-	position top
-}
+gaps outer 10
+gaps inner 10
+
