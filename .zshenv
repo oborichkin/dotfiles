@@ -38,3 +38,6 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 export GOPATH="$XDG_DATA_HOME"/go
 export PATH="$PATH:$GOPATH/bin"
+
+source $XDG_DATA_HOME/secrets
+

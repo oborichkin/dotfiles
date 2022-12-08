@@ -16,5 +16,6 @@ alias start-vpn="sudo systemctl start openvpn-client@protei"
 alias stop-vpn="sudo systemctl stop openvpn-client@protei"
 
 alias nvidia-settings="nvidia-settings --config=$XDG_CONFIG_HOME/nvidia/settings"
+alias mbsync="mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc"
 
 alias dotfiles="git --git-dir=$XDG_DATA_HOME/dotfiles --work-tree=$HOME"
