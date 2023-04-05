@@ -76,6 +76,7 @@ bindsym $mod+0 workspace number $ws10
 bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Tab workspace back_and_forth
+bindsym Mod1+Tab exec --no-startup-id selwindow
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -96,7 +97,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+Shift+m exec rofi -modi emoji -show emoji
+bindsym $mod+Shift+m exec rofi -modi emoji -show emoji -no-disable-history
 bindsym $mod+Shift+p exec workon
 
 bindsym $mod+e layout toggle split
@@ -126,6 +127,6 @@ default_floating_border pixel 0
 for_window [class=".*"] border pixel 0
 for_window [class="Alacritty"] floating enable
 
-gaps outer 10
-gaps inner 10
+gaps outer 0
+gaps inner 0
 

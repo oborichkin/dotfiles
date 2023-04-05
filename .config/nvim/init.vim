@@ -13,6 +13,7 @@ call plug#begin()
   Plug 'preservim/nerdtree'
   Plug 'ryanoasis/vim-devicons'
   Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'ap/vim-css-color'
 call plug#end()
 
 " CtrlP config
