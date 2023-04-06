@@ -30,3 +30,13 @@ _comp_options+=(globdots)		# Include hidden files.
 
 source $XDG_CONFIG_HOME/aliases
 
+# OH MY ZSH STUFF
+plugins=(virtualenv)
+
+source $ZDOTDIR/ohmyzsh/oh-my-zsh.sh
+
+# virtualenv config
+ZSH_THEME_VIRTUALENV_PREFIX="🐍("
+ZSH_THEME_VIRTUALENV_SUFFIX=")"
+PS1="$(virtualenv_prompt_info)$PS1"
+
