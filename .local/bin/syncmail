@@ -1,0 +1,4 @@
+#!/bin/bash
+source ~/.local/share/secrets
+mbsync -c /home/pavel/.config/isync/mbsyncrc -Va
+
