@@ -1,0 +1,22 @@
+IMAPAccount protei
+Host imap.protei-lab.ru
+User oborin_p@protei-lab.ru
+PassCmd "bw get password oborin_p@protei-lab.ru"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore protei-remote
+Account protei
+
+MaildirStore protei-local
+SubFolders Verbatim
+Path ~/.local/share/mail/protei/
+Inbox ~/.local/share/mail/protei/Inbox
+
+Channel protei
+Far :protei-remote:
+Near :protei-local:
+Patterns *
+Create Both
+Expunge Both
+SyncState *

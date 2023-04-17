@@ -1,0 +1,41 @@
+# IMAP
+set mbox_type = Maildir
+set folder="~/.local/share/mail/protei"
+set spoolfile = +Inbox
+set postponed = +Drafts
+set record = +Sent
+set trash = +Trash
+mailboxes +Drafts +Junk +Trash +Sent +Inbox +Inbox/GitLab +Inbox/YouTrack +Inbox/TeamCity +Inbox/Projects +Inbox/Projects/A-SBC +Inbox/ad +Inbox/ad/abscense +Inbox/ad/birthdays +Inbox/ad/buysell +Inbox/ad/fridges +Inbox/ad/newportal +Inbox/ad/towtrucks
+
+set header_cache = ~/.cache/neomutt/headercache
+set message_cachedir = ~/.cache/neomutt
+
+# SMTP
+set smtp_pass = ""
+set smtp_user = "oborin_p@protei-lab.ru"
+set smtp_url = smtp://smtp.protei-lab.ru:25
+set realname = "Павел А. Оборин"
+set from = "oborin_p@protei-lab.ru"
+set use_from = yes
+set ssl_force_tls = yes
+
+set sort = threads
+set sort_aux = reverse-date
+
+bind index,pager \Ck sidebar-prev # Ctrl-p - Previous Mailbox
+bind index,pager \Cj sidebar-next # Ctrl-n - Next Mailbox
+bind index,pager \Cl sidebar-open # Ctrl-o - Open Highlighted Mailbox
+bind index,pager \Cb sidebar-toggle-visible # Ctrl+b - Display/Hide Sidebar
+
+set hide_thread_subject = no
+
+# Show the sidebar
+set sidebar_visible = yes
+set sidebar_width = 40
+set sidebar_folder_indent = yes
+set sidebar_short_path = yes
+set mail_check_stats = yes
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S" # TODO: Change format
+
+set mailcap_path = ~/.config/neomutt/mailcap
+auto_view text/html
