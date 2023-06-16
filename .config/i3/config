@@ -117,6 +117,7 @@ exec --no-startup-id polybar
 exec --no-startup-id picom
 exec --no-startup-id pasystray
 exec --no-startup-id unclutter
+exec --no-startup-id nextcloud
 
 # Screenshots
 bindsym --release Print exec screenshot
