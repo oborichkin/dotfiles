@@ -31,6 +31,7 @@ _comp_options+=(globdots)		# Include hidden files.
 source $XDG_CONFIG_HOME/aliases
 
 # OH MY ZSH STUFF
+DISABLE_AUTO_UPDATE=true
 source $ZDOTDIR/ohmyzsh/oh-my-zsh.sh
 
 # virtualenv config
@@ -40,4 +41,4 @@ function venv_info() {
     echo "🐍"
 }
 PS1="$(venv_info)$PS1"
-
+[ -s ~/.luaver/luaver ] && . ~/.luaver/luaver

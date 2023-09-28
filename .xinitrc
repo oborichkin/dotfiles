@@ -10,6 +10,11 @@ xset -dpms
 xset s noblank
 xset r rate 210 40
 
+if command -v synclient &> /dev/null
+then
+    synclient VertScrollDelta=-31 HorizScrollDelta=-31
+fi
+
 # see https://unix.stackexchange.com/a/295652/332452
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 
