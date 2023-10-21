@@ -1,6 +1,13 @@
 env:
   LANG: en_US.UTF-8
 
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux"
+
 font:
   normal:
     family: CaskaydiaCovePL Nerd Font
@@ -18,12 +25,12 @@ font:
     family: CaskaydiaCovePL Nerd Font
     style: Bold Italic
 
-  size: 9
+  size: 12
 
 window:
   padding:
-    x: 18
-    y: 18
+    x: 5
+    y: 5
 
 colors:
   primary:

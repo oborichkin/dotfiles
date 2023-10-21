@@ -101,6 +101,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 bindsym $mod+Shift+m exec rofi -modi emoji -show emoji -no-disable-history
 bindsym $mod+Shift+p exec workon
+bindsym $mod+y exec yt-open-issue
 
 bindsym $mod+e layout toggle split
 bindsym $mod+t layout tabbed
