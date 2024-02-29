@@ -12,6 +12,7 @@ export READER="zathura"
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # Ansible
@@ -35,6 +36,10 @@ export GEM_HOME="$XDG_DATA_HOME"/gem
 export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+export W3M_DIR="$XDG_STATE_HOME"/w3m
+export OMNISHARPHOME="$XDG_CONFIG_HOME"/omnisharp
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export ELINKS_CONFDIR="$XDG_CONFIG_HOME"/elinks
 
 export VAGRANT_HOME="$XDG_DATA_HOME"/vagrant
 export VAGRANT_ALIAS_FILE="$XDG_DATA_HOME"/vagrant/aliases

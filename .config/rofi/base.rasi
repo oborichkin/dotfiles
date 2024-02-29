@@ -1,8 +1,7 @@
 * {
-    font: "Cascadia Code 18";
+    font: "BigBlueTermPlus Nerd Font Mono 18";
 }
 
-@import "~/.cache/wal/colors-rofi-light"
 
 listview {
     margin: 25px 0 0 0;
@@ -20,7 +19,5 @@ element-text {
 element selected,
 element-text selected,
 element-icon selected  {
-    background-color: @active-background;
-    border-color: @active-background;
     border-radius: 15px;
 }
